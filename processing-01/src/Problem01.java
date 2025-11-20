@@ -17,7 +17,6 @@ public class Problem01 extends PApplet {
     public void setup() {
         x = customHeight / 3;
         y = customWidth / 3;
-
     }
 
     @Override
@@ -52,6 +51,12 @@ public class Problem01 extends PApplet {
             boolNum *= -1;
             tempX = x;
             tempY += 32;
+        }
+        if (mouseX >= x+32 && mouseY >= y+32 && mouseX < 2*x-32 && mouseY < 2*x-32){
+            int idX = mouseX/32;
+            int idY = mouseY/32;
+            fill(128,128,128);
+            square(idX*32, idY*32, 32);
         }
     }
 
